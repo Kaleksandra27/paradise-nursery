@@ -1,30 +1,15 @@
-import { Routes, Route, Link } from "react-router-dom";
-import ProductList from "./components/ProductList";
-import CartItem from "./components/CartItem";
-import AboutUs from "./components/AboutUs";
-import "./App.css";
-
-function App() {
+function AboutUs() {
   return (
-    <>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <div className="landing">
-              <h1>Paradise Nursery 🌿</h1>
-              <Link to="/plants">
-                <button>Get Started</button>
-              </Link>
-            </div>
-          }
-        />
-        <Route path="/plants" element={<ProductList />} />
-        <Route path="/cart" element={<CartItem />} />
-        <Route path="/about" element={<AboutUs />} />
-      </Routes>
-    </>
+    <div className="about-us-container">
+      <h2>About Paradise Nursery</h2>
+      <p>
+        Paradise Nursery is a family-owned online plant shop offering a wide variety of beautiful houseplants.
+      </p>
+      <p>
+        Our mission is to bring life and happiness into every home by providing healthy plants and excellent customer service.
+      </p>
+    </div>
   );
 }
 
-export default App;
+export default AboutUs;
